@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:pomodoro/components/CronometroBotao.dart';
+import 'package:pomodoro/components/BotaoControleCronometro.dart';
 import 'package:pomodoro/store/pomodoro.store.dart';
 import 'package:provider/provider.dart';
 
@@ -40,7 +40,7 @@ class Cronometro extends StatelessWidget {
                   if (!store.iniciado)
                     Padding(
                       padding: const EdgeInsets.all(10),
-                      child: CronometroBotao(
+                      child: BotaoControleCronometro(
                           texto: 'Iniciar',
                           icon: Icons.play_arrow,
                           click: store.iniciar),
@@ -48,12 +48,12 @@ class Cronometro extends StatelessWidget {
                   if (store.iniciado)
                     Padding(
                       padding: const EdgeInsets.all(10),
-                      child: CronometroBotao(
+                      child: BotaoControleCronometro(
                           texto: 'Parar', icon: Icons.stop, click: store.parar),
                     ),
                   Padding(
                     padding: const EdgeInsets.all(10),
-                    child: CronometroBotao(
+                    child: BotaoControleCronometro(
                       texto: 'Reiniciar',
                       icon: Icons.refresh,
                       click: store.reiniciar,

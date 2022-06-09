@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pomodoro/components/widgets/ElevatedButtonTempo.dart';
+import 'package:pomodoro/components/BotaoControleTempo.dart';
 
-class EntradaTempo extends StatelessWidget {
+class ControleTempo extends StatelessWidget {
   final String titulo;
   final int valor;
   final void Function()? incrementar;
   final void Function()? decrementar;
 
-  const EntradaTempo(
+  const ControleTempo(
       {Key? key,
       required this.titulo,
       required this.valor,
@@ -26,12 +26,12 @@ class EntradaTempo extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          ElevatedButtonTempo(icon: Icons.arrow_upward, onPressed: incrementar),
+          BotaoControleTempo(icon: Icons.arrow_upward, onPressed: incrementar),
           Text(
             '$valor min',
             style: const TextStyle(fontSize: 18),
           ),
-          ElevatedButtonTempo(
+          BotaoControleTempo(
               icon: Icons.arrow_downward, onPressed: decrementar),
         ]),
       ],

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:pomodoro/store/pomodoro.store.dart';
 import 'package:provider/provider.dart';
 
-class ElevatedButtonTempo extends StatelessWidget {
+class BotaoControleTempo extends StatelessWidget {
   final IconData? icon;
   final void Function()? onPressed;
 
-  const ElevatedButtonTempo({Key? key, this.icon, this.onPressed})
+  const BotaoControleTempo({Key? key, this.icon, this.onPressed})
       : super(key: key);
 
   @override

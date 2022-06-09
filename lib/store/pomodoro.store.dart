@@ -35,7 +35,7 @@ abstract class _PomodoroStore with Store {
 
     if (minutos == 0) minutos = 1;
 
-    cronometro = Timer.periodic(const Duration(milliseconds: 50), (timer) {
+    cronometro = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (minutos == 0 && segundos == 0) {
         _trocarTipoIntervalo();
       } else if (segundos == 0) {
